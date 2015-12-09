@@ -38,13 +38,17 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The News ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 	
-	echo "<br>details<br>";
-	echo $_POST["head"]."<br>";
-	echo $_POST["story"]."<br>";
-	echo $_POST["category"]."<br>";
+	$head=$_POST["head"];
+	$story=$_POST["story"];
+	$category=$_POST["category"];
 	$fname=$_FILES["fileToUpload"]["name"];
-	echo $fname;
-
+	echo $head."<br>";
+	echo $story."<br>";
+	echo $category."<br>";
+	$con = mysqli_connect("localhost","root","mca");
+	mysqli_select_db($con,"mcadb") or die(mysqli_error($con));
+	$query=mysqli_query($con,"INSERT INTO news_tab(head,category,story,image) VALUES ('$head',$category,'$story','$fname')");
+	echo "success";
 
 
     } else {
