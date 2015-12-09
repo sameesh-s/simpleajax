@@ -1,16 +1,20 @@
 <html>
 <head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script>
 <script src="jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 var auto_refresh=setInterval( function()
 {
-$('#load').load('reload.php').fadeIn('slow');
+$('#load').load('test.php').fadeIn('slow');
 },10000);
 </script>
 </head>
 <body>
 it works
 <div id="load"></div>
-<div id="news"  class="container-fluid">horizontel</div>
+<div id="news"  class="container-fluid">horizontel
+	<p>testing</p>
+</div>
 </body>
 
