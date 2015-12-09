@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+var auto_refresh=setInterval( function()
+{
+$('#load').load('reload.php').fadeIn('slow');
+},100);
+</script>
+</head>
+<body>
+it works
+<div id="load"></div>
+</body>
+
