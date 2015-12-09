@@ -37,6 +37,16 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The News ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	
+	echo "<br>details<br>";
+	echo $_POST["head"]."<br>";
+	echo $_POST["story"]."<br>";
+	echo $_POST["category"]."<br>";
+	$fname=$_FILES["fileToUpload"]["name"];
+	echo $fname;
+
+
+
     } else {
         echo "Sorry, there was an error uploadig the news.";
     }
