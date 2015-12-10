@@ -23,7 +23,7 @@ else
 		$_SESSION['business']=$latest[0];
 		}	
 	}
-$rslt=mysqli_query($con,"select * from news_tab where news_id <=".$_SESSION['business']." 8 AND category = 2 ORDER BY news_id DESC");
+$rslt=mysqli_query($con,"select * from news_tab where news_id <=".$_SESSION['business']." AND category = 2 ORDER BY news_id DESC");
 $row=mysqli_fetch_row($rslt);
 		$_SESSION['countb']=$_SESSION['countb']+1;
 		$_SESSION['business']=$row[0]-1;

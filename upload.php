@@ -15,7 +15,7 @@ if ($uploadOk == 0) {
 	$category=$_POST["category"];
 	$fname=$_FILES["fileToUpload"]["name"];
 	$query=mysqli_query($con,"INSERT INTO news_tab(head,category,story,image) VALUES ('$head',$category,'$story','$fname')");
-	header("location:home.html");
+	header("location:index.html");
 
 
     } else {
