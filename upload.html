@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset=”utf-8”> 
-	<title>Update news</title>
-	<link rel=”stylesheet” href=”css/bootstrap.css”  type=”text/css”/>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width,intial-scale=1">
+	<title>NEWS</title>
+	<link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
 	<script src="jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<div class="jumbotron">
+	<div class="container text-center">
+		<h1>NEWS</h1>
+		<div class="btn-group">
+			<a href="home.html" class="btn btn-lg btn-warning">HOME</a>
+			<a href="upload.html" class="btn btn-lg btn-warning">UPLOAD</a>
+		</div>
+	</div>
+</div>
+<div name="phpcode" class="container text-center">
 <form action="upload.php" method="post" enctype="multipart/form-data">
 	Heading :
 	<input type="text" name="head" size="120"><br>
@@ -19,12 +29,13 @@
 	<option value=3>Sport</option>
 	<option value=4>Wheather</option>
 	</select><br>
-	Story :<br>
-	<textarea name="story" rows="30" cols="132"></textarea><br>
+	Story <br>
+	<textarea name="story" rows="24" cols="132"></textarea><br>
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload"><br>
     <input type="submit" value="Upload News" name="submit">
 </form>
-
+</div>
+<hr>
 </body>
 </html> 
