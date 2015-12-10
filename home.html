@@ -7,6 +7,21 @@
 	<link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
 	<script src="jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var auto_refresh=setInterval( function(){
+			$('#international').load('international.php').fadeIn('slow');
+			},2000);
+		var auto_refresh1=setInterval( function(){
+			$('#business').load('business.php').fadeIn('slow');
+			},3000);
+		var auto_refresh=setInterval( function(){
+			$('#sport').load('sport.php').fadeIn('slow');
+			},4000);
+		var auto_refresh1=setInterval( function(){
+			$('#wheather').load('wheather.php').fadeIn('slow');
+			},5000);
+	</script>
+
 </head>
 <body>
 <div class="container">
@@ -16,7 +31,7 @@
 	            <div class="container">
 	              <ul class="nav">
 	                <li class="active"><a href="#">Home</a></li>
-	                <li><a href="#">Upload</a></li>
+	                <li><a href="upload.html">Upload</a></li>
 
 	              </ul>
 	            </div>
@@ -34,17 +49,17 @@
      </div>
 
 <div class="container-fluid">
-	        	<div class="span3">
-				<p>dummy test</p>
+	        	<div id="international" class="span3">
+				<p>International</p>
 	        	</div>
-	        	<div class="span3">
-	        		<p>Dummy Text</p>
+	        	<div id="business" class="span3">
+	        		<p>Business</p>
 	        	</div>
-	        	<div class="span3">
-	        		<p>Dummy Text</p>
+	        	<div id="sport" class="span3">
+	        		<p>Sport</p>
 	        	</div>
-	        	<div class="span3">
-	        		<p>Dummy Text</p>
+	        	<div id="wheather" class="span3">
+	        		<p>Wheather</p>
 	        	</div>
 	        </div>
 
